@@ -1,6 +1,9 @@
-# w-dashboard
+# Weather dashboard
+
+AS A traveler
+I WANT to see the weather outlook for multiple cities
+SO THAT I can plan a trip accordingly
 
 
-
-##Deployed page
+## Deployed page
 https://kamilaraggi.github.io/w-dashboard/
