@@ -1,10 +1,25 @@
+var button = document.querySelector('.button');
+var inputCity = document.querySelector ('.inputCity')
+var cityname = document.querySelector('.cityname');
+var descript = document.querySelector('.descript');
+var temperature = document.querySelector('.temperature');
 
-//var cityFormEl = document.querySelector("#form-input");
-//var cityInputEl = document.querySelector("#city");
-//var currentWeatherEl = document.querySelector("#current-weather");
+button.addEventListener('click',function(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputCity.value+'&appid=51da3ef96280e0ef29f115a548759117')
+    .then(response => response.json())
+    .then(data => 
+       {
+       //var citynameValue = data['name'];
+        var temperatureValue = data['main']['temp'];
+        var descriptValue = data['weather'][0]['description'];
+        
+       //cityname.innerHTML = nameValue;
+       temperature.innerHTML = temperatureValue;
+       descript.innerHTML = descriptValue;
+       })
+       
+     
 
-var getUserCity = function(cityName) {
-   fetch("https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + "b08cb2b5801d3392ed02e64840da40e7");
+    .catch(err => alert("Invalid Input!"))
 
-
-};
+})

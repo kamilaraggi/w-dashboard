@@ -1,0 +1,37 @@
+/** Kamila Raggi 06 Challenge **/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.input{
+    text-align: center;
+    margin:100px 0;
+}
+
+input[type="text"]{
+    height: 50px;
+    width: 160px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+
+}
+
+input[type="submit"]{
+    height: 50px;
+    width: 150px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+
+}
+
+.display {
+ text-align: center;
+}
