@@ -5,7 +5,8 @@ var descript = document.querySelector('.descript');
 var temperature = document.querySelector('.temperature');
 
 button.addEventListener('click',function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputCity.value+'&appid=51da3ef96280e0ef29f115a548759117')
+    var search = inputCity.value
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+search+'&appid=51da3ef96280e0ef29f115a548759117')
     .then(response => response.json())
     .then(data => 
        {
@@ -23,3 +24,6 @@ button.addEventListener('click',function(){
     .catch(err => alert("Invalid Input!"))
 
 })
+
+
+//const forecastEls = document.querySelector();
